@@ -5,3 +5,4 @@ A collection of Java practice programs covering a variety of concepts, assignmen
 ## Contents
 
 - [Assignment 1](../../tree/assignment1)
+- [Assignment 2](../../tree/assignment2)
