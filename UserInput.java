@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.*;
 
 // Class to handle user input
 public class UserInput {
@@ -14,24 +15,23 @@ public class UserInput {
         return getScanner().nextInt();
     }
 
-    // Method to get a float input from the user with a prompt message
-    public float getFloatInput(String message) {
-        System.out.print(message);
-        return getScanner().nextFloat();
-    }
-
     // Method to get a string input from the user with a prompt message
     public String getStringInput(String message) {
         System.out.print(message);
         return getScanner().nextLine();
     }
 
-	// Method to get a Student object from the user
-	public Student getStudentInput() {
-		String studentString = getScanner().nextLine();
-		String[] details = studentString.split(" ");
-		Student student = new Student(Integer.parseInt(details[0]), details[1], details[2], Float.parseFloat(details[3]));
-		return student;
-	}
-
+	// Method to get choice input from the user
+    public String getChoiceInput(String[] choices, String choice) {
+        String choiceString = String.format("[%s]", String.join(", ", choices));
+        List<String> choiceList = Arrays.asList(choices);
+        System.out.printf("Select %s from %s: ", choice, choiceString);
+        while(true) {
+            String input = getScanner().nextLine();
+            if (choiceList.contains(input)) {
+                return input;
+            }
+            System.out.printf("Invalid %s. Select %s from %s: ", choice, choice, choiceString);
+        }
+    }
 }
