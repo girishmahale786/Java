@@ -8,3 +8,4 @@ A collection of Java practice programs covering a variety of concepts, assignmen
 - [Assignment 2](../../tree/assignment2)
 - [Assignment 3](../../tree/assignment3)
 - [Assignment 4](../../tree/assignment4)
+- [Assignment 5](../../tree/assignment5)
