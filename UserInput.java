@@ -40,12 +40,8 @@ public class UserInput {
         // Prompt user to enter each element of the array
         System.out.println("Enter elements:");
         for (int i = 0; i < size; i++) {
-            // Check if the next input is a double
-            if (scanner.hasNextDouble()) {
-                array[i] = scanner.nextDouble();
-            }
+            array[i] = scanner.nextDouble();
         }
-
         return array;
     }
 
